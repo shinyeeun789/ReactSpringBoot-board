@@ -15,11 +15,6 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    @GetMapping("/test")
-    public String time() {
-        return "안녕하세요. 현재 서버 시간은 " + new Date() + " 입니다!";
-    }
-
     @GetMapping("/user")
     public List<Users> user() {
         List<Users> userList = userService.getUserList();
@@ -28,4 +23,11 @@ public class UserController {
         }
         return userService.getUserList();
     }
+
+    @GetMapping("/authentication/sign-up")
+    public boolean idCheck() {
+
+        return true;
+    }
+
 }
