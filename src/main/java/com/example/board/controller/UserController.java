@@ -23,11 +23,4 @@ public class UserController {
         }
         return userService.getUserList();
     }
-
-    @GetMapping("/authentication/sign-up")
-    public boolean idCheck() {
-
-        return true;
-    }
-
 }
